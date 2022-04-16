@@ -39,11 +39,30 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               body: const TabBarView(children: [
-                Icon(Icons.music_note),
-                Icon(Icons.music_video),
-                Icon(Icons.camera_alt),
-                Icon(Icons.grade),
-                Icon(Icons.email)
+                Icon(
+                  Icons.music_note,
+                  size: 100,
+                  color: Colors.amber,
+                ),
+                Icon(
+                  Icons.music_video,
+                  size: 100,
+                  color: Colors.red,
+                ),
+                Icon(
+                  Icons.camera_alt,
+                  size: 100,
+                  color: Colors.amberAccent,
+                ),
+                Icon(
+                  Icons.grade,
+                  size: 100,
+                ),
+                Icon(
+                  Icons.email,
+                  size: 100,
+                  color: Colors.blue,
+                )
               ]),
             )));
   }
