@@ -6,13 +6,31 @@ void main(List<String> args) {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+  static const String _title = 'Drawer Example';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: _title,
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.amber),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Drawer Testing'),
+          // shape:
+          // RoundedRectangleBorder(borderRadius: BorderRadius.circular(360)),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.comment),
+              tooltip: 'Comment Icon',
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.settings),
+              tooltip: 'Settings',
+            )
+          ],
         ),
         body: const Center(
           child: Text('Hello World'),
@@ -48,8 +66,7 @@ class MyApp extends StatelessWidget {
           fixedColor: Colors.green,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: 'Settings'),
+            BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Menu'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.music_note), label: 'Music')
           ],
